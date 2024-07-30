@@ -22,3 +22,10 @@ map("n", "<C-q>", ":qa!<CR>", opts)
 map("n", "<C-a>", "ggVG", opts)
 map("i", "<C-a>", "<ESC>ggVG<CR>a", opts)
 map("v", "<C-a>", "ggVG", opts)
+
+-- 设置复制
+map("v", "<C-c>", '"+y', opts)
+map("n", "<C-c>", '"+y', opts)
+map("i", "<C-c>", '<ESC>"+y', opts)
+map("n", "<C-v>", '"+p', opts)
+map("i", "<C-v>", '<ESC>"+p', opts)
