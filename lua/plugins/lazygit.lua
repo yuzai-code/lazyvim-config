@@ -13,7 +13,7 @@ return {
       desc = "打开文件管理器",
     },
     {
-      "<leader>gw",
+      "<leader>gG",
       function()
         require("lazygit").lazygit(nil, vim.fn.getcwd())
       end,
