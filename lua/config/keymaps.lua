@@ -34,3 +34,7 @@ map("i", "<C-v>", '<ESC>"+p', opts)
 -- 设置行首行尾
 map("n", "H", "^", opts)
 map("n", "L", "$", opts)
+
+-- 设置alt+h l 切换buffer
+map("n", "<A-h>", ":bprevious<CR>", opts)
+map("n", "<A-l>", ":bnext<CR>", opts)
