@@ -38,3 +38,21 @@ map("n", "L", "$", opts)
 -- 设置alt+h l 切换buffer
 map("n", "<A-h>", ":bprevious<CR>", opts)
 map("n", "<A-l>", ":bnext<CR>", opts)
+
+-- 在 keymaps.lua 或 init.lua 中添加以下内容：
+
+-- 语法高亮快捷键（以防需要）
+vim.api.nvim_set_keymap("n", "<space>th", ":TSBufToggle highlight<CR>", { noremap = true, silent = true })
+
+-- 折叠快捷键
+vim.api.nvim_set_keymap("n", "<space>za", "za", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<space>zc", "zc", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<space>zo", "zo", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<space>zm", "zM", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<space>zr", "zR", { noremap = true, silent = true })
+
+-- 增量选择快捷键
+vim.api.nvim_set_keymap("n", "gnn", ":TSNodeSelect<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "grn", ":TSNodeIncremental<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "grc", ":TSNodeScopeIncremental<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "grm", ":TSNodeDecremental<CR>", { noremap = true, silent = true })
