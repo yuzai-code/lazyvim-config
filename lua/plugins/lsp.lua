@@ -1,4 +1,5 @@
 -- LSP keymaps
+-- 修改已经安装的lsp的配置
 return {
   "neovim/nvim-lspconfig",
   opts = function()
