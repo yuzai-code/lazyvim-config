@@ -3,7 +3,6 @@
 
 return {
   "kdheepak/lazygit.nvim",
-  lazy = true,
   keys = {
     {
       "<leader>gg",
