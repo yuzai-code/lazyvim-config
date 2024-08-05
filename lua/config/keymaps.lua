@@ -8,6 +8,7 @@ local map = vim.keymap.set
 local unmap = vim.keymap.del
 
 -- 检查并取消现有映射
+unmap("n", "<c-/>")
 
 -- ********设置新的映射*******
 map("i", "jj", "<Esc>", opts)
