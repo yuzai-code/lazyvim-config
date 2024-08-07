@@ -10,3 +10,4 @@ vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldenable = false
 -- 设置默认的折叠级别
 vim.opt.foldlevel = 99
+-- 设置背景颜色级别
