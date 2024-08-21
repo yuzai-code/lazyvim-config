@@ -5,7 +5,29 @@ return {
     event = "BufReadPost",
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "c", "cpp", "lua", "python", "javascript", "typescript", "html", "css", "bash" }, -- 具体语言列表
+        ensure_installed = {
+          "c",
+          -- "cpp",
+          "lua",
+          "python",
+          "javascript",
+          "typescript",
+          "html",
+          "css",
+          "bash",
+          "vue",
+          "go",
+        }, -- 具体语言列表
+        auto_install = true, -- 自动安装
+        rainbow = {
+          enable = true,
+          extended_mode = true,
+          max_file_lines = nil,
+        }, -- 启用彩虹括号
+        context_commentstring = {
+          enable = true,
+          enable_autocmd = false,
+        }, -- 启用注释
         highlight = {
           enable = true, -- 启用语法高亮
           additional_vim_regex_highlighting = false, -- 禁用 Vim 正则高亮以避免冲突
@@ -68,6 +90,8 @@ return {
       -- 设置折叠方法为 treesitter
       vim.o.foldmethod = "expr"
       vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+      -- 默认不折叠
+      vim.wo.foldlevel = 99
     end,
   },
 }
