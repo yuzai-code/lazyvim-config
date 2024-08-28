@@ -16,6 +16,7 @@ return {
           "venv", -- 忽略 venv 文件夹
           "%.exe", -- 忽略所有 .exe 文件
           "%.dll", -- 忽略所有 .dll 文件
+          "pkg", -- 忽略所有的 go pkg 包
         },
       },
     })
