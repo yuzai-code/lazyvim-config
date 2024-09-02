@@ -16,6 +16,43 @@ vim.opt.foldlevel = 10
 -- 设置使用系统默认剪切板
 vim.opt.clipboard = "unnamedplus"
 
+-- 如果您使用的是WSL，则需要进行一些额外的配置
+if vim.fn.has("wsl") == 1 then
+  -- 使用wl-clipboard (如果可用)
+  if vim.fn.executable("wl-copy") == 1 then
+    vim.g.clipboard = {
+      name = "wl-clipboard (wsl)",
+      copy = {
+        ["+"] = "wl-copy --foreground --type text/plain",
+        ["*"] = "wl-copy --foreground --primary --type text/plain",
+      },
+      paste = {
+        ["+"] = function()
+          return vim.fn.systemlist("wl-paste --no-newline", { "" }, 1)
+        end,
+        ["*"] = function()
+          return vim.fn.systemlist("wl-paste --primary --no-newline", { "" }, 1)
+        end,
+      },
+      cache_enabled = true,
+    }
+  -- 否则使用 xclip
+  elseif vim.fn.executable("xclip") == 1 then
+    vim.g.clipboard = {
+      name = "xclip",
+      copy = {
+        ["+"] = "xclip -selection clipboard",
+        ["*"] = "xclip -selection primary",
+      },
+      paste = {
+        ["+"] = "xclip -selection clipboard -o",
+        ["*"] = "xclip -selection primary -o",
+      },
+      cache_enabled = true,
+    }
+  end
+end
+
 -- nevide 的配置
 if vim.g.nevide then
   -- 滚动动画长度
