@@ -54,6 +54,6 @@ vim.api.nvim_set_keymap("n", "<space>zr", "zR", { noremap = true, silent = true 
 
 -- 增量选择快捷键
 vim.api.nvim_set_keymap("n", "gnn", ":TSNodeSelect<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "grn", ":TSNodeIncremental<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "grc", ":TSNodeScopeIncremental<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "grm", ":TSNodeDecremental<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gnr", ":TSNodeIncremental<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gnc", ":TSNodeScopeIncremental<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gnm", ":TSNodeDecremental<CR>", { noremap = true, silent = true })
