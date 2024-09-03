@@ -7,9 +7,9 @@ vim.opt.foldmethod = "expr"
 -- 设置折叠表达式为 nvim_treesitter 的 foldexpr
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 -- 禁用自动折叠
-vim.opt.foldenable = false
+vim.opt.foldenable = true
 -- 设置默认的折叠级别
-vim.opt.foldlevel = 99
+vim.opt.foldlevel = 10
 -- 设置使用系统默认剪切板
 vim.opt.clipboard = "unnamedplus"
 
