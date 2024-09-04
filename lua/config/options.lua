@@ -3,12 +3,12 @@
 -- Add any additional options here
 
 -- 配置node路径
-vim.g.node_host_prog = vim.fn.expand("$HOME/.local/share/nvm/v20.17.0/bin/node")
+-- vim.g.node_host_prog = vim.fn.expand("$HOME/.local/share/nvm/v20.17.0/bin/node")
 
 -- 设置折叠方法为表达式
 vim.opt.foldmethod = "expr"
 -- 设置折叠表达式为 nvim_treesitter 的 foldexpr
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- 禁用自动折叠
 vim.opt.foldenable = true
 -- 设置默认的折叠级别
