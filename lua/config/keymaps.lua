@@ -109,3 +109,13 @@ map("n", "<Space>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
 -- 其他:
 -- :BarbarEnable - 启用 barbar（默认启用）
 -- :BarbarDisable - 非常糟糕的命令，永远不应该使用
+
+-- vscode 插件的配置
+if vim.g.vscode then
+  -- 禁用快捷键 ctrl + / 打开终端
+  unmap("n", "<c-/>")
+  vim.keymap.set("x", "gc", "<Plug>VSCodeCommentary", {})
+  vim.keymap.set("n", "gc", "<Plug>VSCodeCommentary", {})
+  vim.keymap.set("o", "gc", "<Plug>VSCodeCommentary", {})
+  vim.keymap.set("n", "gcc", "<Plug>VSCodeCommentaryLine", {})
+end
