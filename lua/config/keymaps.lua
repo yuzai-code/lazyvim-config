@@ -57,3 +57,65 @@ vim.api.nvim_set_keymap("n", "gnn", ":TSNodeSelect<CR>", { noremap = true, silen
 vim.api.nvim_set_keymap("n", "gnr", ":TSNodeIncremental<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gnc", ":TSNodeScopeIncremental<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gnm", ":TSNodeDecremental<CR>", { noremap = true, silent = true })
+
+-- barbar.nvim 快捷键设置
+
+-- 移动到上一个/下一个缓冲区
+map("n", "<A-h>", "<Cmd>BufferPrevious<CR>", opts)
+map("n", "<A-l>", "<Cmd>BufferNext<CR>", opts)
+
+-- 重新排序到上一个/下一个
+map("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)
+map("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)
+
+-- 跳转到特定缓冲区
+map("n", "<A-1>", "<Cmd>BufferGoto 1<CR>", opts)
+map("n", "<A-2>", "<Cmd>BufferGoto 2<CR>", opts)
+map("n", "<A-3>", "<Cmd>BufferGoto 3<CR>", opts)
+map("n", "<A-4>", "<Cmd>BufferGoto 4<CR>", opts)
+map("n", "<A-5>", "<Cmd>BufferGoto 5<CR>", opts)
+map("n", "<A-6>", "<Cmd>BufferGoto 6<CR>", opts)
+map("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
+map("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
+map("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
+map("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
+
+-- 固定/取消固定缓冲区
+map("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
+
+-- 关闭缓冲区
+map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
+
+-- 完全删除缓冲区
+--                 :BufferWipeout
+
+-- 关闭命令
+--                 :BufferCloseAllButCurrent
+--                 :BufferCloseAllButPinned
+--                 :BufferCloseAllButCurrentOrPinned
+--                 :BufferCloseBuffersLeft
+--                 :BufferCloseBuffersRight
+
+-- 神奇的缓冲区选择模式
+map("n", "<C-p>", "<Cmd>BufferPick<CR>", opts)
+
+-- 自动排序方式...
+map("n", "<Space>bb", "<Cmd>BufferOrderByBufferNumber<CR>", opts)
+map("n", "<Space>bn", "<Cmd>BufferOrderByName<CR>", opts)
+map("n", "<Space>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
+map("n", "<Space>bl", "<Cmd>BufferOrderByLanguage<CR>", opts)
+map("n", "<Space>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
+
+-- 其他:
+-- :BarbarEnable - 启用 barbar（默认启用）
+-- :BarbarDisable - 非常糟糕的命令，永远不应该使用
+
+-- vscode 插件的配置
+if vim.g.vscode then
+  -- 禁用快捷键 ctrl + / 打开终端
+  unmap("n", "<c-/>")
+  vim.keymap.set("x", "gc", "<Plug>VSCodeCommentary", {})
+  vim.keymap.set("n", "gc", "<Plug>VSCodeCommentary", {})
+  vim.keymap.set("o", "gc", "<Plug>VSCodeCommentary", {})
+  vim.keymap.set("n", "gcc", "<Plug>VSCodeCommentaryLine", {})
+end
