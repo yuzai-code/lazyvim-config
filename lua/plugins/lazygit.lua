@@ -1,22 +1,15 @@
--- plugin/lazygit.lua
--- lazygit插件配置使用
-
 return {
-  "kdheepak/lazygit.nvim",
-  keys = {
-    {
-      "<leader>gg",
-      function()
-        require("lazygit").lazygit()
-      end,
-      desc = "打开文件管理器",
-    },
-    {
-      "<leader>gG",
-      function()
-        require("lazygit").lazygit(nil, vim.fn.getcwd())
-      end,
-      desc = "在 nvim 的工作目录中打开文件管理器",
-    },
-  },
+  -- {
+  --   "jesseduffield/lazygit",
+  --   cmd = "LazyGit",
+  --   config = function()
+  --     vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "打开lazy git" })
+  --   end,
+  -- },
+  -- {
+  --   "tpope/vim-fugitive",
+  --   config = function()
+  --     vim.keymap.set("n", "<leader>gs", "<cmd>Git<cr>", { desc = "Git status" })
+  --   end,
+  -- },
 }
