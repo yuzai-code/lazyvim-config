@@ -21,6 +21,9 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "lazyvim.plugins.extras.vscode" },
     { import = "plugins" },
+    { import = "lazyvim.plugins.extras.editor.mini-diff" },
+    { import = "lazyvim.plugins.extras.editor.mini-files" },
+    { import = "lazyvim.plugins.extras.editor.mini-move" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.

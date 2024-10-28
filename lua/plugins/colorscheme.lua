@@ -7,14 +7,26 @@ return {
   --     colorscheme = "gruvbox",
   --   },
   -- },
+  -- {
+  --   "folke/tokyonight.nvim",
+  -- opts = {
+  --   transparent = true,
+  --   styles = {
+  --     sidebars = "transparent",
+  --     floats = "transparent",
+  --   },
+  -- },
+  -- },
   {
-    "folke/tokyonight.nvim",
-    -- opts = {
-    --   transparent = true,
-    --   styles = {
-    --     sidebars = "transparent",
-    --     floats = "transparent",
-    --   },
-    -- },
+    "rebelot/kanagawa.nvim",
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      -- colorscheme = "kanagawa",
+      colorscheme = "kanagawa-wave",
+      -- colorscheme = "kanagawa-dragon",
+      -- colorscheme = "kanagawa-lotus",
+    },
   },
 }
