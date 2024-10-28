@@ -69,4 +69,6 @@ if vim.g.nevide then
   vim.g.neovide_cursor_animation_length = 0.1
   -- 配置粒子特效
   vim.g.neovide_cursor_vfx_mode = "torpedo"
+  -- 配置字体
+  vim.g.guifont = "Source Code Pro:h14"
 end
