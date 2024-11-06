@@ -1,8 +1,9 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-vim.o.shell = "nu"
+-- vim.o.shell = ""
+
 -- 设置 Neovide 的全局字体
--- vim.o.guifont = "Source Code Pro:h14"
+vim.o.guifont = ""
 
 -- 行间距
 vim.opt.linespace = 0
