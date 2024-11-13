@@ -28,9 +28,9 @@ map("v", "<C-a>", "ggVG", opts)
 map("v", "<C-c>", '"+y', opts)
 map("n", "<C-c>", '"+y', opts)
 map("i", "<C-c>", '<ESC>"+y', opts)
-map("v", "<C-v>", '"+p', opts)
-map("n", "<C-v>", '"+p', opts)
-map("i", "<C-v>", '<ESC>"+p', opts)
+-- map("v", "<C-v>", '"+p', opts)
+-- map("n", "<C-v>", '"+p', opts)
+-- map("i", "<C-v>", '<ESC>"+p', opts)
 
 -- 设置行首行尾
 map("n", "H", "^", opts)
